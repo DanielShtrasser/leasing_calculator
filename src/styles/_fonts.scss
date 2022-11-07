@@ -1,0 +1,78 @@
+
+$font-family_NekstBlack: 'Nekst-Black';
+$font-family_Gilroy: 'Gilroy';
+
+$font-weight_900: 900;
+$font-weight_400: 400;
+
+$font-style_normal: normal;
+
+$font-size_16: 16px;
+$font-size_20: 20px;
+$font-size_30: 30px;
+$font-size_47: 47px;
+$font-size_54: 54px;
+
+$line-height_20: 20px;
+$line-height_24: 24px;
+$line-height_36: 36px;
+$line-height_90: 90%;
+$line-height_120: 120%;
+$line-height_150: 150%;
+
+
+@mixin fontNekst-s20_lh24 {
+  font-family: $font-family_NekstBlack;
+  font-weight: $font-weight_900;
+  font-style: $font-style_normal;
+  font-size: $font-size_20;
+  line-height: $line-height_24;
+}
+
+@mixin fontNekst-s20_lh120 {
+  font-family: $font-family_NekstBlack;
+  font-weight: $font-weight_900;
+  font-style: $font-style_normal;
+  font-size: $font-size_20;
+  line-height: $line-height_120;
+}
+
+@mixin fontNekst-s30_lh36 {
+  font-family: $font-family_NekstBlack;
+  font-weight: $font-weight_900;
+  font-style: $font-style_normal;
+  font-size: $font-size_30;
+  line-height: $line-height_36;
+}
+
+@mixin fontNekst-s36_lh36 {
+  font-family: $font-family_NekstBlack;
+  font-weight: $font-weight_900;
+  font-style: $font-style_normal;
+  font-size: $font-size_36;
+  line-height: $line-height_36;
+}
+
+@mixin fontNekst-s54_lh90 {
+  font-family: $font-family_NekstBlack;
+  font-weight: $font-weight_900;
+  font-style: $font-style_normal;
+  font-size: $font-size_54;
+  line-height: $line-height_90;
+}
+
+@mixin fontGilroy-s16_lh20 {
+  font-family: $font-family_Gilroy;
+  font-weight: $font-weight_400;
+  font-style: $font-style_normal;
+  font-size: $font-size_16;
+  line-height: $line-height_20;
+}
+
+@mixin fontGilroy-s150_lh150 {
+  font-family: $font-family_Gilroy;
+  font-weight: $font-weight_400;
+  font-style: $font-style_normal;
+  font-size: $font-size_16;
+  line-height: $line-height_150;
+}

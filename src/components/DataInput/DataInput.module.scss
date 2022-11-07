@@ -1,0 +1,64 @@
+@use '../../styles/fonts';
+@use '../../styles/colors';
+
+.dataInput {
+  display: flex;
+  gap: 26px;
+  margin-top: 32px;
+  @media (max-width: 1119px) {
+    flex-direction: column;
+  }
+}
+
+.dataInputBlock {
+  display: flex;
+  flex-direction: column;
+  width: 427px;
+  color: colors.$text-color;
+
+  @include fonts.fontNekst-s30_lh36;
+
+  @media (max-width: 1439px) {
+    width: 320px;
+  }
+  @media (max-width: 1119px) {
+    width: 100%;
+  }
+  @media (max-width: 767px) {
+    width: 280px;
+  }
+
+  & p {
+    @include fonts.fontGilroy-s16_lh20;
+    margin-bottom: 24px;
+  }
+
+  input {
+    border-radius: 16px;
+    background: #F3F3F4;
+    @include fonts.fontNekst-s30_lh36;
+    &:focus {
+    background: #ffffff;
+  }
+  }
+
+  .inputRightElementPrice, .inputRightElementMonth, .inputRightElementInitial {
+    @include fonts.fontNekst-s30_lh36;
+    height: 100%;
+    right: 24px
+  }
+
+  .inputRightElementPrice {
+    width: 20px;
+  }
+
+  .inputRightElementMonth {
+    
+  }
+
+  .inputRightElementInitial {
+    @include fonts.fontNekst-s20_lh120;
+    right: 24px;
+
+  }
+}
