@@ -6,8 +6,6 @@ import {
 
 import styles from './DataOutput.module.scss'
 
-
-
 function DataOutput({
     formattedContractPrice,
     formattedMonthPay,
@@ -16,35 +14,35 @@ function DataOutput({
 
   return (
     <div className={styles.dataOutput}>
-      <div className={styles.contractPrice}>
-        <p className={styles.inputHeader8}>Сумма договора лизинга</p>
+      <div className={styles.outputWrapper}>
+        <div className={styles.contractPrice}>
+          <p className={styles.inputHeader8}>Сумма договора лизинга</p>
+            <Input
+              name="total_sum"
+              value={`${formattedContractPrice} ${'₽'}`}
+              readOnly
+              focusBorderColor='none'
+              borderRadius='16px'
+              variant='unstyled'
+              size='md' />
+        </div>
+        <div className={styles.monthPay}>
+          <p className={styles.inputHeader8}>Ежемесячный платеж от</p>
           <Input
-            name="total_sum"
-            value={`${formattedContractPrice} ${'₽'}`}
-            readOnly
-            focusBorderColor='none'
-            borderRadius='16px'
-            variant='unstyled'
-            size='lg' />
-        {/* <input name="total_sum" value={`${formattedContractPrice} ${'₽'}`} readOnly></input> */}
+              name="monthly_payment_from"
+              value={`${formattedMonthPay} ${'₽'}`}
+              readOnly
+              focusBorderColor='none'
+              borderRadius='16px'
+              variant='unstyled'
+              size='md' />
+        </div>
       </div>
-      <div className={styles.monthPay}>
-        <p className={styles.inputHeader8}>Ежемесячный платеж от</p>
-        <Input
-            name="monthly_payment_from"
-            value={`${formattedMonthPay} ${'₽'}`}
-            readOnly
-            focusBorderColor='none'
-            borderRadius='16px'
-            variant='unstyled'
-            size='lg' />
-        {/* <input name="monthly_payment_from" value={`${formattedMonthPay} ${'₽'}`} readOnly></input> */}
-      </div>
-      <div>
+      {/* <div> */}
         <button type="submit" className={styles.submit} disabled={isSubmitting}>
         {isSubmitting ? <Spinner /> : "Оставить заявку"}
         </button>
-      </div>
+      {/* </div> */}
   </div>
   )
 }

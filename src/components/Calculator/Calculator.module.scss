@@ -4,10 +4,8 @@
 .calcForm {
   display: flex;
   flex-direction: column;
-
+  gap: 20px;
   width: 1440px;
-  height: 100%;
-  padding: 0 48px 0 47px;
   background: #FFFFFF;
 
   @media (max-width: 1439px) {
@@ -15,32 +13,22 @@
   } 
   @media (max-width: 1119px) {
     width: 768px;
-    padding: 0 36px 0 36px;
+    // padding: 0 36px 0 36px;
   }
   @media (max-width: 767px) {
-    width: 320px;
-    padding: 0 20px 0 21px;
-  }
-  @media (max-width: 319px) {
     width: 100vw;
   }
 }
 
 .headerText {
-  width: 753px;
-  margin-top: 213px;
+  @include fonts.fontNekst-s50_lh90;
+  color: colors.$black-text;
 
   @media (max-width: 1119px) {
-    width: 768px;
-    margin-top: 64px;
+    @include fonts.fontNekst-s30_lh36
   }
   @media (max-width: 767px) {
-    width: 279px;
-    font-size: 34px;
-    margin-top: 44px;
+    @include fonts.fontNekst-s20_lh24
   }
 
-  @include fonts.fontNekst-s54_lh90;
-
-  color: colors.$black-text;
 }

@@ -4,9 +4,9 @@
 .dataInput {
   display: flex;
   gap: 26px;
-  margin-top: 32px;
   @media (max-width: 1119px) {
     flex-direction: column;
+    gap: 10px;
   }
 }
 
@@ -24,13 +24,13 @@
   @media (max-width: 1119px) {
     width: 100%;
   }
-  @media (max-width: 767px) {
-    width: 280px;
-  }
+  // @media (max-width: 767px) {
+  //   width: 280px;
+  // }
 
   & p {
     @include fonts.fontGilroy-s16_lh20;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
   }
 
   input {
@@ -50,10 +50,6 @@
 
   .inputRightElementPrice {
     width: 20px;
-  }
-
-  .inputRightElementMonth {
-    
   }
 
   .inputRightElementInitial {

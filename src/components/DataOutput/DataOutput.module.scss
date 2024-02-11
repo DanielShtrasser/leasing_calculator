@@ -1,75 +1,40 @@
+@use '../../styles/fonts';
 @use '../../styles/colors';
 
 .dataOutput {
   display: flex;
-  flex-wrap: wrap;
   gap: 26px;
-  align-items: center;
-  margin-top: 44px;
-  margin-bottom: 213px;
-
   @media (max-width: 1119px) {
-    margin-top: 37px;
-    margin-bottom: 156px;
-  }
-
-  @media (max-width: 767px) {
-    margin-top: 16px;
-    margin-bottom: 64px;
+    gap: 10px;
+    flex-direction: column;
   }
 }
 
-.submit {
-  width: 426px;
-  height: 68px;
-
-  font-family: 'Nekst-Black';
-  font-style: normal;
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 36px;
-
-  border-radius: 40px;
-  color: colors.$background-color;
-  background: colors.$brand-color;
-
-  @media (max-width: 1439px) {
-    width: 320px;
-  }
-  @media (max-width: 767px) {
-    width: 280px;
-    height: 60px;
-    font-size: 22px;
-    line-height: 20px;
-  }
-
-  &:hover {
-    background: #111111;
+.outputWrapper {
+  display: flex;
+  // gap: 26px;
+  justify-content: space-around;
+  @media (max-width: 1119px) {
+    // gap: 10px;
   }
 }
 
 .contractPrice {
   display: flex;
   flex-direction: column;
-  // margin-right: 28px;
-  width: 427px;
+  max-width: 427px;
 
   @media (max-width: 1439px) {
     width: 320px;
-    // margin-right: 28px;
   }
 
   @media (max-width: 1119px) {
-    width: 320px;
-    // margin-right: 28px;
-    margin-bottom: 44px;
+    margin-bottom: 15px;
   }
 
   @media (max-width: 767px) {
-    width: 167px;
-    margin-bottom: 29px;
+    width: 45vw;
   }
-
 
   & p {
     font-family: 'Gilroy';
@@ -85,18 +50,18 @@
   }
 
   & input {
-    
     font-family: 'Nekst-Black';
     font-style: normal;
     font-weight: 900;
-    font-size: 54px;
-    line-height: 90%;
+    @include fonts.fontNekst-s50_lh90;
     color: colors.$black_text;
 
     @media (max-width: 767px) {
-      width: 167px;
-      font-size: 22px;
-      line-height: 20px;
+      @include fonts.fontNekst-s30_lh36
+    }
+
+    @media (max-width: 425px) {
+      @include fonts.fontNekst-s20_lh24
     }
   }
 }
@@ -105,24 +70,17 @@
   display: flex;
   flex-direction: column;
   width: 427px;
-  // margin-right: 26px;
 
   @media (max-width: 1439px) {
     width: 320px;
-    // margin-right: 93px;
   }
 
   @media (max-width: 1119px) {
-    // margin-right: 0;
-    width: 332px;
-    margin-bottom: 44px;
+    margin-bottom: 15px;
   }
 
   @media (max-width: 767px) {
-    // margin-right: 0;
-    width: 167px;
-    height: 41px;
-    margin-bottom: 32px;
+    width: 45vw;
   }
 
   & p {
@@ -140,22 +98,47 @@
   }
 
   & input {
-    // width: 260px;
     font-family: 'Nekst-Black';
     font-style: normal;
     font-weight: 900;
-    font-size: 54px;
-    line-height: 90%;
+    @include fonts.fontNekst-s50_lh90;
     color: colors.$black_text;
     
     @media (max-width: 767px) {
-      width: 167px;
-      font-size: 22px;
-      line-height: 20px;
+      @include fonts.fontNekst-s30_lh36
+    }
+
+    @media (max-width: 425px) {
+      @include fonts.fontNekst-s20_lh24
     }
   }
 }
 
-.positionWrapper {
-  position: relative;
+.submit {
+  width: 426px;
+  height: 68px;
+
+  @include fonts.fontNekst-s30_lh36;
+
+  border-radius: 40px;
+  color: colors.$background-color;
+  background: colors.$brand-color;
+
+  @media (max-width: 1439px) {
+    width: 320px;
+  }
+
+  @media (max-width: 1190px) {
+    align-self: center  ;
+  }
+
+  @media (max-width: 767px) {
+    width: 280px;
+    height: 60px;
+    @include fonts.fontNekst-s20_lh24
+  }
+
+  &:hover {
+    background: #111111;
+  }
 }
